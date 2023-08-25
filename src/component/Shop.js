@@ -8,7 +8,7 @@ export const Shop = () => {
             <div className='mt-5 flex justify-between 2xl:mx-9 '>
 
                 <div className='ml-7 flex justify-between items-center border-2'>
-                    <input type="search" placeholder='search' className='h-8 w-[500px] focus:outline-none pl-2' />
+                    <input type="search" placeholder='search' className='h-8 w-[500px] focus:outline-none pl-2 block  p-4' />
                     <div className="">
                         <BiSearchAlt2 size={25} className=' text-gray-400' />
                     </div>
