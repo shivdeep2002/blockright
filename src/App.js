@@ -7,6 +7,7 @@ import { NFT } from './component/NFT';
 import {Products} from"./component/Products";
 import { Shop } from './component/Shop';
 import { License } from './component/License';
+import { Orders } from './component/Orders';
 function App() {
   return (
     <Router>
@@ -19,6 +20,7 @@ function App() {
         <Route path="/products" element={<Products/>}/>
         <Route path="/shop" element={<Shop/>}/>
         <Route path="/license" element={<License/>}/>
+        <Route path="/orders" element={<Orders/>}/>
         </Routes>
         </div>
 

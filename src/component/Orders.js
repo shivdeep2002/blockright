@@ -1,12 +1,7 @@
-import React, { useState } from 'react'
-import { Data } from './User_data'
-// import { useState } from 'react'
-export const User = () => {
+import {React, useState} from 'react'
+import { Data } from './User_data';
 
-    let a = "border-2 p-3 w-100%"
-    let b = "border-2"
-    // const [page, setPage] = useState(10)
-
+export const Orders = () => {
     const [currentPage, setCurrentPage] = useState(1)
     const recordsPerPage = 15;
     const lastIndex = currentPage * recordsPerPage;
@@ -14,7 +9,11 @@ export const User = () => {
     const records = Data.slice(firstIndex, lastIndex)
     const npage = Math.ceil(Data.length / recordsPerPage)
     const numbers = [...Array(npage + 1).keys()].slice(1)
+
+    let a = "border-2 p-3 w-100%"
+    let b = "border-2"
     return (
+        
         <div>
             <div className="flex justify-center mt-5">
                 <table className='w-100% h-100% text-center text-sm'>
@@ -49,10 +48,7 @@ export const User = () => {
                     ))}
 
                 </table>
-
             </div>
-
-
             <div className='flex justify-center mt-2  sticky bottom-0 '>
                 <div aria-label="Page navigation exampl ">
                     <ul className="inline-flex space-x-px text-sm bor border-2">
@@ -71,9 +67,9 @@ export const User = () => {
 
             </div>
 
-
         </div>
     )
+    
     function perPage(){
         if (currentPage !== firstIndex){
             setCurrentPage(currentPage - 1)
@@ -89,7 +85,5 @@ export const User = () => {
             setCurrentPage(currentPage + 1)
         }
     }
-
 }
-
 
